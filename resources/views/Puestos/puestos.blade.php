@@ -3,7 +3,7 @@
 @section('contenido')
 
 <div id="Puesto">
-	 <button class="btn btn-success glyphicon glyphicon-user" v-on:click="showModal()">Agregar</button>
+	 <button class="btn btn-outline-success fa fa-user" v-on:click="showModal()">Agregar</button>
 	<br><br>
 	<table class="table table-bordered table-hover table-striped" style="background-color: lightgreen">
 		<thead style="background-color: #000">
@@ -17,8 +17,8 @@
 				<td>@{{puesto.nombre}}</td>
 				
 				<td>
-					<span class="btn btn-primary btn-xs glyphicon glyphicon-pencil" v-on:click="editPuesto(puesto.id_puesto)"></span>
-					<span class="btn btn-danger btn-xs glyphicon glyphicon-trash" v-on:click="eliminarPuesto(puesto.id_puesto,puesto.nombre)"></span>
+					<span class="btn btn-outline-primary btn-xs fa fa-pencil" v-on:click="editPuesto(puesto.id_puesto)"></span>
+					<span class="btn btn-outline-danger btn-xs fa fa-trash" v-on:click="eliminarPuesto(puesto.id_puesto,puesto.nombre)"></span>
 				</td>
 			</tr>
 		</tbody>

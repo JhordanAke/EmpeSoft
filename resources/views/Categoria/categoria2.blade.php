@@ -5,12 +5,12 @@
 <div id="Categoria">
 
 	<div class="row">
-		<div class="col-xs-8">
+		<div class="col-8">
 		<input type="text" placeholder="Escriba el nombre de la categoria" class="form-control" v-model="buscar" value="buscar">
 		</div>
 	</div>
 	<br>
-	 <button class="btn btn-success glyphicon glyphicon-user" v-on:click="showModal()">Agregar</button>
+	 <button class="btn btn-outline-success" v-on:click="showModal()">Agregar</button>
 	<br><br>
 	<table class="table table-bordered table-hover table-striped" style="background-color: lightgreen">
 		<thead style="background-color: #000">
@@ -25,8 +25,8 @@
 				<td>@{{cate.nombre}}</td>
 				<td>@{{cate.tasa_interes}}%	</td>
 				<td>
-					<span class="btn btn-primary btn-xs glyphicon glyphicon-pencil" v-on:click="editPuesto(cate.id_categoria)"></span>
-					<span class="btn btn-danger btn-xs glyphicon glyphicon-trash" v-on:click="eliminarCategoria(cate.id_categoria,cate.nombre)"></span>
+					<span class="btn btn-outline-primary btn-xs fa fa-pencil" v-on:click="editCategoria(cate.id_categoria)"></span>
+					<span class="btn btn-outline-danger btn-xs fa fa-trash" v-on:click="eliminarCategoria(cate.id_categoria,cate.nombre)"></span>
 				</td>
 			</tr>
 		</tbody>
@@ -46,7 +46,7 @@
 				
 				</div>
 				<div class="modal-footer">
-					<h6>Nombre:@{{nombre}}</h6>
+					<h6>Nombre:@{{nombre}}</h6><br>
 					<h6>Interes:@{{tasa_interes}}</h6>
  			<button type="submit" class="btn btn-primary" v-on:click="agregarCategoria()" v-if="!editando">Guardar</button>
 					<button type="submit" class="btn btn-primary" v-on:click="updateCategoria(auxCategoria)" v-if="editando">Actualizar</button>

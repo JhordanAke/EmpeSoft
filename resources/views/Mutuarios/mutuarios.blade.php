@@ -5,14 +5,14 @@
 	<div class="container">
 
 	<div class="row">
-		<div class="col-xs-8">
+		<div class="col-8">
 		<input type="text" placeholder="Escriba el nombre o el apellido paterno del mutuario" class="form-control" v-model="buscar" value="buscar">
 		</div>
 	</div>
 	<br>
 		<h1 class="text center text-primary">Agregar Mutuario</h1>
-		<button class="btn btn-success glyphicon glyphicon-user" v-on:click="showModal()">Agregar</button><br><br>
-		<a href="{{url('empe')}}"><button class="btn btn-warning btn-toolbar">Realizar empeño</button></a>
+		<button class="btn btn-outline-success " v-on:click="showModal()">Agregar</button><br><br>
+		<a href="{{url('empe')}}"><button class="btn btn-outline-warning">Realizar empeño</button></a>
 		<br><br>
 			<table class="table table-bordered">
 				<thead style="background-color: black">
@@ -35,8 +35,8 @@
 						<td>@{{ mutu.direccion }}</td>
 						<td>@{{ mutu.localidad }}</td>
 						<td>
-							<span class="btn btn-primary btn-xs fa fa-pencil" v-on:click="editMutuario(mutu.id_mutuario)"></span>
-							<span class="btn btn-danger btn-xs glyphicon fa fa-trash" v-on:click="eliminarMutuario(mutu.id_mutuario)"></span>
+							<span class="btn btn-outline-primary btn-xs fa fa-pencil" v-on:click="editMutuario(mutu.id_mutuario)"></span>
+							<span class="btn btn-outline-danger btn-xs fa fa-trash" v-on:click="eliminarMutuario(mutu.id_mutuario)"></span>
 						</td>
 					</tr>
 				</tbody>

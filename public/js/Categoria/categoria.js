@@ -81,7 +81,7 @@ new Vue({
 				this.id_categoria= response.data.id_categoria;
 				this.nombre= response.data.nombre;
 				this.tasa_interes= response.data.tasa_interes;
-				this.auxCategoria= response.data.id_puesto;
+				this.auxCategoria= response.data.id_categoria;
 			});
 
 		},

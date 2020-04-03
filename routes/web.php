@@ -27,6 +27,7 @@ Route::view('pues','Puestos.puestos');
 Route::view('admin','Administrador.adminis');
 Route::view('perso','Administrador.personal');
 Route::view('ad','Administrador.administrador');
+Route::view('abo','Abonos.abono');
 
 //zona apis
 Route::apiResource('apiempe','ApiEmpeñoController');
